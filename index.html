@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Jake says: Rest, You Star 🌟</title>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Baloo 2', cursive;
+      background: linear-gradient(to bottom, #f9f3ff, #dbeeff);
+      color: #333;
+      text-align: center;
+      overflow-x: hidden;
+      transition: all 0.5s ease-in-out;
+    }
+
+    h1 {
+      color: #4b4b4b;
+      margin-top: 50px;
+      font-size: 2.5em;
+    }
+
+    img {
+      margin-top: 30px;
+      width: 250px;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(255, 176, 236, 0.4);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    img:hover {
+      transform: scale(1.05);
+    }
+
+    button {
+      margin-top: 30px;
+      padding: 12px 20px;
+      background-color: #ffbee8;
+      border: none;
+      border-radius: 25px;
+      font-size: 16px;
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    button:hover {
+      background-color: #ff92d0;
+    }
+
+    #message {
+      font-size: 18px;
+      margin-top: 20px;
+      color: #444;
+    }
+
+    .stars {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: url('https://i.ibb.co/GWbyY1v/stars.png') repeat;
+      animation: scrollStars 60s linear infinite;
+      opacity: 0.1;
+    }
+
+    @keyframes scrollStars {
+      0% { background-position: 0 0; }
+      100% { background-position: 1000px 1000px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="stars"></div>
+  <h1>💗 Jake says: You're doing amazing, sweetie 💗</h1>
+  <img src="https://i.pinimg.com/originals/3c/9c/4e/3c9c4e5d0b3e0f8a6d8e10762c9f7419.gif" alt="Jake smile" />
+  <br>
+  <button onclick="cheerUp()">Click here if you're tired 🐶</button>
+  <p id="message"></p>
+
+  <audio autoplay loop>
+  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3" />
+</audio>
+
+
+  <script>
+    const messages = [
+      "💤 Jangan lupa istirahat yaa, aku bangga banget sama kamu!",
+      "💪 Jake bilang kamu itu strong banget, lebih dari yang kamu kira!",
+      "🍞 Makan dulu yuk, biar nggak pingsan kayak laptop lowbat 😭",
+      "🐶 Layla pun ikut support kamu dari jauh, woof woof!"
+    ];
+    function cheerUp() {
+      const msg = messages[Math.floor(Math.random() * messages.length)];
+      document.getElementById("message").innerText = msg;
+    }
+  </script>
+</body>
+</html>
